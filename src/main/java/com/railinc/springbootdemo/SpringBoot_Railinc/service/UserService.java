@@ -37,7 +37,22 @@ public class UserService {
         return userRepository.findOne(idUser);
     }
 
-//    /**
+    public void addUser(User user) {
+        userRepository.save(user);
+    }
+
+    public void updateUser(Integer idUser, User user) {
+        User u = getAUser(idUser);
+        u.setFirstName(user.getFirstName());
+        u.setLastName(user.getLastName());
+        userRepository.save(u);
+    }
+
+    public void deleteUser(Integer idUser) {
+        userRepository.delete(idUser);
+    }
+
+    //    /**
 //     * Get a User or list of users with the same firstName and/or lastName
 //     * @param firstName
 //     * @param lastName
@@ -55,20 +70,5 @@ public class UserService {
 //        }
 //        return users;
 //    }
-
-    public void addUser(User user) {
-        userRepository.save(user);
-    }
-
-    public void updateUser(Integer idUser, User user) {
-        User u = getAUser(idUser);
-        u.setFirstName(user.getFirstName());
-        u.setLastName(user.getLastName());
-        userRepository.save(u);
-    }
-
-    public void deleteUser(Integer idUser) {
-        userRepository.delete(idUser);
-    }
 
 }

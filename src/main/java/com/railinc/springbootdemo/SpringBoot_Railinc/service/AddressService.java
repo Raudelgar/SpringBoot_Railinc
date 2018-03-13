@@ -2,7 +2,6 @@ package com.railinc.springbootdemo.SpringBoot_Railinc.service;
 
 import com.railinc.springbootdemo.SpringBoot_Railinc.dao.AddressRepository;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
-import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +11,13 @@ import java.util.List;
 @Service
 public class AddressService {
 
+    private List<Address> addresses;
+
     @Autowired
     private AddressRepository addressRepository;
 
     public List<Address> getAllAddress() {
-        List<Address> addresses = new ArrayList<>();
+        addresses = new ArrayList<>();
         addressRepository.findAll().forEach(addresses::add);
         return addresses;
     }
@@ -29,9 +30,14 @@ public class AddressService {
         addressRepository.save(address);
     }
 
-    public void updateAddress(Address address) {
-        addressRepository.save(address);
+    public void updateAddress(Integer idAddress, Address address) {
+        Address a = getAAddress(idAddress);
+        a.setStreet(address.getStreet());
+        a.setCity(address.getCity());
+        a.setState(address.getState());
+        addressRepository.save(a);
     }
+
 
     public void deleteAddress(Integer idAddress) {
         addressRepository.delete(idAddress);
