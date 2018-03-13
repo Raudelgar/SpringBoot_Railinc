@@ -3,11 +3,11 @@ package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_table")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "first_name")
     private String firstName;

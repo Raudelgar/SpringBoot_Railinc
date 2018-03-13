@@ -22,8 +22,8 @@ public class UserService {
         return users;
     }
 
-    public Optional<User> getAUser(Integer idUser) {
-        return userRepository.findById(idUser);
+    public User getAUser(Integer idUser) {
+        return userRepository.findOne(idUser);
     }
 
     public void addUser(User user) {
@@ -35,7 +35,7 @@ public class UserService {
     }
 
     public void deleteUser(Integer idUser) {
-        userRepository.deleteById(idUser);
+        userRepository.delete(idUser);
     }
 
 }
