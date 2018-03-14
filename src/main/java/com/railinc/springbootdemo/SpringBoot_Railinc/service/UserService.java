@@ -35,10 +35,10 @@ public class UserService {
      * Get all userList data
      * @return
      */
-    public List<User> getAllUser() {
-        userList = new ArrayList<>();
-        userRepository.findAll().forEach(userList::add);
-        return userList;
+    public List<Object> getAllUser() {
+        userObj = new ArrayList<>();
+        userRepository.findByUser().forEach(userObj::add);
+        return userObj;
     }
 
 //    public Map<Address, User> getAllUser() {
@@ -58,6 +58,11 @@ public class UserService {
 //        return user;
 //    }
 
+    /**
+     * Get user data, address related by user id
+     * @param idUser
+     * @return
+     */
     public List<Object> getAUser(Integer idUser) {
         userObj = new ArrayList<>();
         userRepository.findByUserId(idUser).forEach(userObj::add);

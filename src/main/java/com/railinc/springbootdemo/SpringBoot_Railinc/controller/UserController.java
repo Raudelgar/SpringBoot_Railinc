@@ -21,7 +21,7 @@ public class UserController {
     private AddressService addressService;
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.GET)
-    public List<User> getAllUser() {
+    public List<Object> getAllUser() {
         return userService.getAllUser();
     }
 
