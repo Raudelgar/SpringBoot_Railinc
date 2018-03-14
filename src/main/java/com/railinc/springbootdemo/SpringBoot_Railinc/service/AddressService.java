@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AddressService {
@@ -30,11 +31,25 @@ public class AddressService {
         addressRepository.save(address);
     }
 
-    public void updateAddress(Integer idAddress, Address address) {
-        Address a = getAAddress(idAddress);
-        a.setStreet(address.getStreet());
-        a.setCity(address.getCity());
-        a.setState(address.getState());
+    public void  updateAddress(Integer idAddress, Address address) {
+        Address a = null;
+
+        if(null != getAAddress(idAddress)) {
+            a = getAAddress(idAddress);
+        } else {
+            return;
+        }
+
+        if(null != address.getStreet() && "".equals(address.getStreet())) {
+            a.setStreet(address.getStreet());
+        }
+        if(null != address.getCity() && "".equals(address.getCity())) {
+            a.setCity(address.getCity());
+        }
+        if(null != address.getState() && "".equals(address.getState())) {
+            a.setState(address.getState());
+        }
+
         addressRepository.save(a);
     }
 

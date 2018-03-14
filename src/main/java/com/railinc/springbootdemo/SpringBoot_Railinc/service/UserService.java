@@ -42,9 +42,21 @@ public class UserService {
     }
 
     public void updateUser(Integer idUser, User user) {
-        User u = getAUser(idUser);
-        u.setFirstName(user.getFirstName());
-        u.setLastName(user.getLastName());
+        User u = null;
+
+        if(null != getAUser(idUser)) {
+            u = getAUser(idUser);
+        } else {
+            return;
+        }
+
+        if(null != user.getFirstName() && "".equals(user.getFirstName())) {
+            u.setFirstName(user.getFirstName());
+        }
+        if(null != user.getLastName() && "".equals(user.getLastName())) {
+            u.setLastName(user.getLastName());
+        }
+
         userRepository.save(u);
     }
 
