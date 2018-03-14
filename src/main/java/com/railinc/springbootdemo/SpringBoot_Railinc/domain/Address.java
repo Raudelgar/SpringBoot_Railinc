@@ -1,6 +1,7 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "address_table")
@@ -12,6 +13,9 @@ public class Address {
     private String street;
     private String city;
     private String state;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "address")
+    private Set<User> users;
 
 
     public Address() {}
@@ -53,5 +57,13 @@ public class Address {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }

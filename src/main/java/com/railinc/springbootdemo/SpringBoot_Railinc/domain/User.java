@@ -14,14 +14,19 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_address", nullable = false)
+    private Address address;
+
     public User() {
 
     }
 
-    public User(Integer id, String firstName, String lastName) {
+    public User(Integer id, String firstName, String lastName, Address address) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address = address;
     }
 
     public Integer getId() {
@@ -48,4 +53,23 @@ public class User {
         this.lastName = lastName;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName ='" + firstName + '\'' +
+                ", lastName ='" + lastName + '\'' +
+                ", Street =" + address.getStreet() + '\'' +
+                ", City =" + address.getCity() + '\'' +
+                ", State =" + address.getState() +
+                '}';
+    }
 }
