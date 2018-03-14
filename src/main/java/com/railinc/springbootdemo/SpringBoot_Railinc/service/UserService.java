@@ -16,13 +16,20 @@ import java.util.*;
 public class UserService {
 
     private List<User> userList;
+    private List<Object> userObj;
     private Map<Address, User> mapUA;
     private User user = null;
+    boolean addressExist = false;
+    boolean userExist = false;
+    private Integer addressId;
+    Optional<Integer> userId;
 
     @Autowired
     private UserRepository userRepository;
+//    @Autowired
+//    private AddressRepository addressRepository;
     @Autowired
-    private AddressRepository addressRepository;
+    private AddressService addressService;
 
     /**
      * Get all userList data
@@ -46,9 +53,19 @@ public class UserService {
      * @param idUser
      * @return
      */
-    public User getAUser(Integer idUser) {
-        user = userRepository.findOne(idUser);
-        return user;
+//    public User getAUser(Integer idUser) {
+//        user = userRepository.findOne(idUser);
+//        return user;
+//    }
+
+    public List<Object> getAUser(Integer idUser) {
+        userObj = new ArrayList<>();
+        userRepository.findByUserId(idUser).forEach(userObj::add);
+        return userObj;
+    }
+
+    public Optional<Integer> getUserIdByFirstNameAndLastNameAndAddressId(User user) {
+        return userRepository.findByUserIdByFirstNameAndLastNameAndAddressId(user.getFirstName(), user.getLastName(), user.getIdAddress());
     }
 
 
@@ -58,39 +75,69 @@ public class UserService {
 //        return mapUA;
 //    }
 
-    public void addUser(User user) {
-        userRepository.save(user);
-    }
-
-//    public void addUser(User user, Address address) {
-//        //find user and address if they exist
-//        //if address exist, skip save address
-//        //if user exist, compare addresses
-//        //if the addresses are the same skip save user
-////        user.setAddress(address);
-////        Set<User> usersSet = new HashSet<>();
-////        usersSet.add(user);
-////        address.setUsers(usersSet);
-//        addressRepository.save(address);
+//    public void addUser(User user) {
 //        userRepository.save(user);
 //    }
 
-    public void updateUser(Integer idUser, User user) {
-        if(null != getAUser(idUser)) {
-            this.user = (User) getAUser(idUser);
-        } else {
+    /**
+     * Add a new user if doesn't exist in the database
+     * check if address exist in address_table, if not save new address
+     * @param userIn
+     * @param address
+     */
+    public void addUser(User userIn, Address address) {
+        //check if address exist to avoid duplicate data, return id
+        addressId = checkAddressId(address);
+        //if user exist with same address
+        userId = checkUserId(userIn);
+
+        if(userExist) {
             return;
+        }else {
+            this.user = new User(userIn.getFirstName(), userIn.getLastName(), addressId);
+            userRepository.save(this.user);
         }
 
-        if(null != user.getFirstName() && "".equals(user.getFirstName())) {
-            this.user.setFirstName(user.getFirstName());
-        }
-        if(null != user.getLastName() && "".equals(user.getLastName())) {
-            this.user.setLastName(user.getLastName());
-        }
-
-        userRepository.save(this.user);
     }
+
+    private Integer checkAddressId(Address address) {
+        Integer id = addressService.getAAddressIdByStreetAndCityAndState(address);
+        if(null != id) {
+            addressExist = true;
+        }else {
+            addressService.addAddress(address);
+            id = addressService.getAAddressIdByStreetAndCityAndState(address);
+        }
+
+        return id;
+    }
+
+    private Optional<Integer> checkUserId(User user) {
+        Optional<Integer> id = null;
+        id = getUserIdByFirstNameAndLastNameAndAddressId(user);
+        if(id.isPresent()) {
+            userExist = true;
+            return id;
+        }
+        return id;
+    }
+
+//    public void updateUser(Integer idUser, User user) {
+//        if(null != getAUser(idUser)) {
+//            this.user = (User) getAUser(idUser);
+//        } else {
+//            return;
+//        }
+//
+//        if(null != user.getFirstName() && "".equals(user.getFirstName())) {
+//            this.user.setFirstName(user.getFirstName());
+//        }
+//        if(null != user.getLastName() && "".equals(user.getLastName())) {
+//            this.user.setLastName(user.getLastName());
+//        }
+//
+//        userRepository.save(this.user);
+//    }
 
     public void deleteUser(Integer idUser) {
         userRepository.delete(idUser);

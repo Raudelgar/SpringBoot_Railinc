@@ -22,12 +22,12 @@ public class User {
 
     }
 
-    public User(Integer id, String firstName, String lastName, Address address) {
-        this.id = id;
+    public User(String firstName, String lastName, Integer idAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = address;
+        this.address = new Address(idAddress,"", "","");
     }
+
 
     public Integer getId() {
         return id;
@@ -53,18 +53,15 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Address getAddress() {
-        return address;
+
+    public Integer getIdAddress() {
+        return address.getId();
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
                 ", firstName ='" + firstName + '\'' +
                 ", lastName ='" + lastName + '\'' +
                 ", Street =" + address.getStreet() + '\'' +

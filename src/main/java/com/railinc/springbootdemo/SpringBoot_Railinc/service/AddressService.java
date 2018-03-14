@@ -29,6 +29,10 @@ public class AddressService {
         return addressRepository.findOne(idAddress);
     }
 
+    public Integer getAAddressIdByStreetAndCityAndState(Address address) {
+        return addressRepository.findByAddressStreetAndCityAndState(address.getStreet(), address.getCity(), address.getState());
+    }
+
     public void addAddress(Address address) {
         addressRepository.save(address);
     }
@@ -59,4 +63,5 @@ public class AddressService {
     public void deleteAddress(Integer idAddress) {
         addressRepository.delete(idAddress);
     }
+
 }

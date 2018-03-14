@@ -1,6 +1,7 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 
 import javax.persistence.*;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -26,6 +27,7 @@ public class Address {
         this.city = city;
         this.state = state;
     }
+
 
     public Integer getId() {
         return id;

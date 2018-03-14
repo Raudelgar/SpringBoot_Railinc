@@ -2,6 +2,7 @@ package com.railinc.springbootdemo.SpringBoot_Railinc.controller;
 
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
+import com.railinc.springbootdemo.SpringBoot_Railinc.service.AddressService;
 import com.railinc.springbootdemo.SpringBoot_Railinc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private AddressService addressService;
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.GET)
     public List<User> getAllUser() {
@@ -23,7 +26,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.GET)
-    public User getAUser(@PathVariable Integer idUser) {
+    public List<Object> getAUser(@PathVariable Integer idUser) {
         return userService.getAUser(idUser);
     }
 
@@ -32,19 +35,19 @@ public class UserController {
 //        return userService.getAUser(idUser);
 //    }
 
-    @RequestMapping(value = "/demo/user", method = RequestMethod.POST)
-    public void addUser(@RequestBody User user) {
-        userService.addUser(user);
-    }
-
 //    @RequestMapping(value = "/demo/user", method = RequestMethod.POST)
-//    public void addUser(@RequestBody User user, @RequestBody Address address) {
-//        userService.addUser(user, address);
+//    public void addUser(@RequestBody User user) {
+//        userService.addUser(user);
 //    }
+
+    @RequestMapping(value = "/demo/user", method = RequestMethod.POST)
+    public void addUser(@RequestBody Address address, @RequestBody User user) {
+        userService.addUser(user, address);
+    }
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.PUT)
     public void updateUser(@PathVariable Integer idUser, @RequestBody User user) {
-        userService.updateUser(idUser, user);
+//        userService.updateUser(idUser, user);
     }
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.DELETE)
