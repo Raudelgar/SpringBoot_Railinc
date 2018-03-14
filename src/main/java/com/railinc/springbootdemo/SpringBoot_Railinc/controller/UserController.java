@@ -41,8 +41,8 @@ public class UserController {
 //    }
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.POST)
-    public void addUser(@RequestBody Address address, @RequestBody User user) {
-        userService.addUser(user, address);
+    public void addUser(@RequestBody User user) {
+        userService.addUser(user);
     }
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.PUT)

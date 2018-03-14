@@ -58,6 +58,13 @@ public class User {
         return address.getId();
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     @Override
     public String toString() {

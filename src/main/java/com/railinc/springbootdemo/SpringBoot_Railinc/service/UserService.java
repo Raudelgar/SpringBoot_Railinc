@@ -88,11 +88,10 @@ public class UserService {
      * Add a new user if doesn't exist in the database
      * check if address exist in address_table, if not save new address
      * @param userIn
-     * @param address
      */
-    public void addUser(User userIn, Address address) {
+    public void addUser(User userIn) {
         //check if address exist to avoid duplicate data, return id
-        addressId = checkAddressId(address);
+        addressId = checkAddressId(userIn.getAddress());
         //if user exist with same address
         userId = checkUserId(userIn);
 
