@@ -17,14 +17,9 @@ import java.util.Optional;
 @RestController
 public class UserController {
 
-//    @Autowired
-//    private UserService userService;
     @Autowired
     private iUsService userService;
-//    @Autowired
-//    private iAddService addressService;
-//    @Autowired
-//    private AddressService addressService;
+
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.GET)
     public List<Object> getAllUser() {
