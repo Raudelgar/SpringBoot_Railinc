@@ -1,8 +1,11 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.service;
 
+import com.railinc.springbootdemo.SpringBoot_Railinc.SpringBootRailincApplication;
 import com.railinc.springbootdemo.SpringBoot_Railinc.dao.UserRepository;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +16,8 @@ import java.util.*;
 @Service
 @Transactional
 public class UserService implements iUsService{
+
+    private static Logger log = LoggerFactory.getLogger(SpringBootRailincApplication.class);
 
     private List<Object> userObj;
     private User user = null;
@@ -107,6 +112,24 @@ public class UserService implements iUsService{
     @Override
     public void deleteUser(Integer idUser) {
         userRepository.delete(idUser);
+    }
+
+    @Override
+    public List<Object> getAUserByName(Optional<String> firstNameUser, Optional<String> lastNameUser) {
+        userObj = new ArrayList<>();
+
+        if (firstNameUser.isPresent()) {
+            userRepository.getAUserByFirstName(firstNameUser).forEach(userObj::add);
+            return userObj;
+        }
+
+        else if(lastNameUser.isPresent()) {
+            userRepository.getAUserByLastName(lastNameUser).forEach(userObj::add);
+            return userObj;
+        }else {
+            return null;
+        }
+
     }
 
 }

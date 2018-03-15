@@ -70,4 +70,18 @@ public interface iUsService {
      * @param idUser
      */
     void deleteUser(Integer idUser);
+
+
+    /**
+     * Return a user(s) by optional firstName or LastName attribute from User Table.
+     * Package/End Point/Action:
+     *                  com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController
+     *                  {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}"}
+     *                  GET
+     *
+     * @param firstNameUser
+     * @param lastNameUser
+     * @return
+     */
+    List<Object> getAUserByName(Optional<String> firstNameUser, Optional<String> lastNameUser);
 }

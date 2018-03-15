@@ -31,6 +31,11 @@ public class UserController {
         return userService.getAUser(idUser);
     }
 
+    @RequestMapping(value = {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}"}, method = RequestMethod.GET)
+    public List<Object> getAUserByName(@PathVariable Optional<String> firstNameUser, @PathVariable Optional<String> lastNameUser) {
+        return userService.getAUserByName(firstNameUser, lastNameUser);
+    }
+
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.POST)
     public void addUser(@RequestBody User user) {
