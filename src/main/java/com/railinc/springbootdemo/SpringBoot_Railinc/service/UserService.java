@@ -127,13 +127,16 @@ public class UserService {
                 user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
     }
 
-//    public void updateUser(Integer idUser, User user) {
-//        if(null != getAUser(idUser)) {
-//            this.user = (User) getAUser(idUser);
-//        } else {
-//            return;
-//        }
-//
+    public void updateUser(Optional<String> firstName, Optional<String> lastName, User user) {
+
+        if(firstName.isPresent()) {
+            userRepository.updateUserFirstName(firstName, user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
+        }
+
+        if(lastName.isPresent()) {
+            userRepository.updateUserLastName(lastName, user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
+        }
+
 //        if(null != user.getFirstName() && "".equals(user.getFirstName())) {
 //            this.user.setFirstName(user.getFirstName());
 //        }
@@ -142,7 +145,7 @@ public class UserService {
 //        }
 //
 //        userRepository.save(this.user);
-//    }
+    }
 
     public void deleteUser(Integer idUser) {
         userRepository.delete(idUser);
