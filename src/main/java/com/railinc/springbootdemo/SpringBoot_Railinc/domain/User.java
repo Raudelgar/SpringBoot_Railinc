@@ -18,6 +18,9 @@ public class User {
     @JoinColumn(name = "id_address", nullable = false)
     private Address address;
 
+//    @Transient
+//    private Integer addressId;
+
     public User() {
 
     }
@@ -54,17 +57,23 @@ public class User {
     }
 
 
-    public Integer getIdAddress() {
-        return address.getId();
-    }
+//    public Integer getIdAddress(Integer addressId) {
+//        return this.addressId = addressId;
+//    }
+
+//    public Address getAddressId(Integer addressId) {
+//        address.setId(addressId);
+////        address = new Address(addressId, address.getStreet(), address.getCity(), address.getState());
+//        return address;
+//    }
 
     public Address getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
     @Override
     public String toString() {

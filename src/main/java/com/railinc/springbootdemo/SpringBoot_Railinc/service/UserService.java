@@ -22,7 +22,7 @@ public class UserService {
     boolean addressExist = false;
     boolean userExist = false;
     private Integer addressId;
-    Optional<Integer> userId;
+    private Integer userId;
 
     @Autowired
     private UserRepository userRepository;
@@ -69,10 +69,6 @@ public class UserService {
         return userObj;
     }
 
-    public Optional<Integer> getUserIdByFirstNameAndLastNameAndAddressId(User user) {
-        return userRepository.findByUserIdByFirstNameAndLastNameAndAddressId(user.getFirstName(), user.getLastName(), user.getIdAddress());
-    }
-
 
 //    public Map<Address, User> getAUser(Integer idUser) {
 //        user = userRepository.findOne(idUser);
@@ -116,14 +112,19 @@ public class UserService {
         return id;
     }
 
-    private Optional<Integer> checkUserId(User user) {
-        Optional<Integer> id = null;
+    private Integer checkUserId(User user) {
+        Integer id = null;
         id = getUserIdByFirstNameAndLastNameAndAddressId(user);
-        if(id.isPresent()) {
+        if(null != id) {
             userExist = true;
             return id;
         }
         return id;
+    }
+
+    private Integer getUserIdByFirstNameAndLastNameAndAddressId(User user) {
+        return userRepository.findByUserIdByFirstNameAndLastNameAndAddressId(user.getFirstName(), user.getLastName(),
+                user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
     }
 
 //    public void updateUser(Integer idUser, User user) {

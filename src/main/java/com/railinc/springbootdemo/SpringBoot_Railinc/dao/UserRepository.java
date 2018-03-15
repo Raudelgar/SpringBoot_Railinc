@@ -12,8 +12,9 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer>{
 
-    @Query("select ut.id from User ut where ut.firstName =?1 and ut.lastName =?2 and ut.address =?3")
-    Optional<Integer> findByUserIdByFirstNameAndLastNameAndAddressId(String firstName, String lastName, Integer address);
+    @Query("select ut.id from User ut where ut.firstName =?1 and ut.lastName =?2 and ut.address = "+
+            "(select adt.id from Address adt where adt.street =?3 and adt.city =?4 and adt.state =?5)")
+    Integer findByUserIdByFirstNameAndLastNameAndAddressId(String firstName, String lastName, String street, String city, String state);
 
     @Query("select ut.firstName, ut.lastName, adt.street, adt.city, adt.state from User ut, Address adt where ut.address =  adt.id and ut.id =?1")
     List<Object> findByUserId(Integer id);
@@ -22,4 +23,8 @@ public interface UserRepository extends JpaRepository<User,Integer>{
     List<Object> findByUser();
 
 }
-
+//@Query("select ut.id from User ut where ut.firstName =?1 and ut.lastName =?2 and ut.address =?3")
+/*
+* @Query("select ut.id from User ut where ut.firstName =?1 and ut.lastName =?2 and ut.address = "+
+            "(select adt.id from Address adt where adt.street =?3 and adt.city =?4 and adt.state =?5)")
+* */
