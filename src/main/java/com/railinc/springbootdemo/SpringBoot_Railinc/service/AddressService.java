@@ -64,4 +64,7 @@ public class AddressService {
         addressRepository.delete(idAddress);
     }
 
+    public void updateAddressStreet(String street, Optional<String> streetAddress, String city, String state) {
+        addressRepository.updateAddressStreet(street, streetAddress, city, state);
+    }
 }

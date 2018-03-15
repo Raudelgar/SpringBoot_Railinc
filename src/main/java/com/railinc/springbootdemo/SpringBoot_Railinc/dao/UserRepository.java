@@ -24,14 +24,14 @@ public interface UserRepository extends JpaRepository<User,Integer>{
     List<Object> findByUser();
 
     @Modifying
-    @Query("update User ut set ut.firstName = ?1 where ut.address = (select adt.id from Address adt where " +
-            "adt.street =?2 and adt.city =?3 and adt.state =?4)")
-    void updateUserFirstName(Optional<String> firstName, String street, String city, String state);
+    @Query("update User ut set ut.firstName = ?1 where ut.firstName =?2 and ut.address = (select adt.id from Address adt where " +
+            "adt.street =?3 and adt.city =?4 and adt.state =?5)")
+    void updateUserFirstName(String firstName, Optional<String> firstNameUser, String street, String city, String state);
 
     @Modifying
-    @Query("update User ut set ut.lastName = ?1 where ut.address = (select adt.id from Address adt where " +
-            "adt.street =?2 and adt.city =?3 and adt.state =?4)")
-    void updateUserLastName(Optional<String> lastName, String street, String city, String state);
+    @Query("update User ut set ut.lastName = ?1 where ut.lastName =?2 and ut.address = (select adt.id from Address adt where " +
+            "adt.street =?3 and adt.city =?4 and adt.state =?5)")
+    void updateUserLastName(String lastName, Optional<String> lastNameUser, String street, String city, String state);
 
 }
 //@Query("select ut.id from User ut where ut.firstName =?1 and ut.lastName =?2 and ut.address =?3")

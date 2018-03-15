@@ -127,24 +127,23 @@ public class UserService {
                 user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
     }
 
-    public void updateUser(Optional<String> firstName, Optional<String> lastName, User user) {
+    public void updateUser(Optional<String> firstName, Optional<String> lastName, Optional<String> streetAddress, User user) {
 
         if(firstName.isPresent()) {
-            userRepository.updateUserFirstName(firstName, user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
+            userRepository.updateUserFirstName(user.getFirstName(), firstName, user.getAddress().getStreet(),
+                    user.getAddress().getCity(), user.getAddress().getState());
         }
 
         if(lastName.isPresent()) {
-            userRepository.updateUserLastName(lastName, user.getAddress().getStreet(), user.getAddress().getCity(), user.getAddress().getState());
+            userRepository.updateUserLastName(user.getLastName(), lastName, user.getAddress().getStreet(),
+                    user.getAddress().getCity(), user.getAddress().getState());
         }
 
-//        if(null != user.getFirstName() && "".equals(user.getFirstName())) {
-//            this.user.setFirstName(user.getFirstName());
-//        }
-//        if(null != user.getLastName() && "".equals(user.getLastName())) {
-//            this.user.setLastName(user.getLastName());
-//        }
-//
-//        userRepository.save(this.user);
+        if(streetAddress.isPresent()) {
+            addressService.updateAddressStreet(user.getAddress().getStreet(), streetAddress, user.getAddress().getCity(),
+                    user.getAddress().getState());
+        }
+
     }
 
     public void deleteUser(Integer idUser) {

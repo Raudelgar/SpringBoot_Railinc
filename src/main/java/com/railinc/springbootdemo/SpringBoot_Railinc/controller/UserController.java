@@ -45,10 +45,11 @@ public class UserController {
         userService.addUser(user);
     }
 
-    @RequestMapping(value = {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}"}, method = RequestMethod.PUT)
+    @RequestMapping(value = {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}",
+            "/demo/user/street/{streetAddress}"}, method = RequestMethod.PUT)
     public void updateUser(@PathVariable Optional<String> firstNameUser, @PathVariable Optional<String> lastNameUser,
-                           @RequestBody User user) {
-        userService.updateUser(firstNameUser, lastNameUser, user);
+                           @PathVariable Optional<String> streetAddress, @RequestBody User user) {
+        userService.updateUser(firstNameUser, lastNameUser, streetAddress, user);
     }
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.DELETE)
