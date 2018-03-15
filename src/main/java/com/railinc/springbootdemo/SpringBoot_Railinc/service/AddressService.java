@@ -12,19 +12,21 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class AddressService {
+public class AddressService implements iAddService {
 
     private List<Address> addresses;
 
     @Autowired
     private AddressRepository addressRepository;
 
+    @Override
     public List<Address> getAllAddress() {
         addresses = new ArrayList<>();
         addressRepository.findAll().forEach(addresses::add);
         return addresses;
     }
 
+    @Override
     public Address getAAddress(Integer idAddress) {
         return addressRepository.findOne(idAddress);
     }
@@ -33,10 +35,12 @@ public class AddressService {
         return addressRepository.findByAddressStreetAndCityAndState(address.getStreet(), address.getCity(), address.getState());
     }
 
+    @Override
     public void addAddress(Address address) {
         addressRepository.save(address);
     }
 
+    @Override
     public void  updateAddress(Integer idAddress, Address address) {
         Address a = null;
 
@@ -60,10 +64,12 @@ public class AddressService {
     }
 
 
+    @Override
     public void deleteAddress(Integer idAddress) {
         addressRepository.delete(idAddress);
     }
 
+    @Override
     public void updateAddressStreet(String street, Optional<String> streetAddress, String city, String state) {
         addressRepository.updateAddressStreet(street, streetAddress, city, state);
     }
