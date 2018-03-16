@@ -15,7 +15,7 @@ import java.util.*;
 
 @Service
 @Transactional
-public class UserService implements iUsService{
+public class UserService implements IUsService {
 
     private static Logger log = LoggerFactory.getLogger(SpringBootRailincApplication.class);
 
@@ -38,6 +38,7 @@ public class UserService implements iUsService{
         userRepository.findByUser().forEach(userObj::add);
         return userObj;
     }
+
 
     @Override
     public List<Object> getAUser(Integer idUser) {

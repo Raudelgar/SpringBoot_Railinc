@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class AddressController {
@@ -37,5 +38,10 @@ public class AddressController {
     @RequestMapping(value = "/demo/address/{idAddress}", method = RequestMethod.DELETE)
     public void deleteAddress(@PathVariable Integer idAddress) {
         addressService.deleteAddress(idAddress);
+    }
+
+    @RequestMapping(value = "/demo/address/street/{street}", method = RequestMethod.GET)
+    public List<Address> getAddressByStreet(@PathVariable String street) {
+        return addressService.findByAddressStreet(street);
     }
 }

@@ -1,5 +1,7 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Optional;
 import java.util.Set;
@@ -16,6 +18,7 @@ public class Address {
     private String state;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "address")
+    @JsonBackReference
     private Set<User> users;
 
 

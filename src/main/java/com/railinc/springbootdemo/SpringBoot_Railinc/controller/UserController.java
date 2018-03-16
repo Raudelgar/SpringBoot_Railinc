@@ -1,34 +1,31 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.controller;
 
-import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
-import com.railinc.springbootdemo.SpringBoot_Railinc.service.AddressService;
-import com.railinc.springbootdemo.SpringBoot_Railinc.service.UserService;
-import com.railinc.springbootdemo.SpringBoot_Railinc.service.iAddService;
-import com.railinc.springbootdemo.SpringBoot_Railinc.service.iUsService;
+import com.railinc.springbootdemo.SpringBoot_Railinc.service.IUsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @RestController
 public class UserController {
 
     @Autowired
-    private iUsService userService;
+    private IUsService userService;
 
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.GET)
-    public List<Object> getAllUser() {
-        return userService.getAllUser();
+    public ResponseEntity<List<Object>> getAllUser() {
+        return new ResponseEntity<List<Object>>(userService.getAllUser(), HttpStatus.OK);
     }
 
+
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.GET)
-    public List<Object> getAUser(@PathVariable Integer idUser) {
-        return userService.getAUser(idUser);
+    public ResponseEntity<List<Object>> getAUser(@PathVariable Integer idUser) {
+        return new ResponseEntity<List<Object>>(userService.getAUser(idUser), HttpStatus.OK);
     }
 
     @RequestMapping(value = {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}"}, method = RequestMethod.GET)

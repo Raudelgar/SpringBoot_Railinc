@@ -5,7 +5,7 @@ import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import java.util.List;
 import java.util.Optional;
 
-public interface iAddService {
+public interface IAddService {
 
     /**
      * Return all address data from Address table
@@ -26,4 +26,6 @@ public interface iAddService {
     void deleteAddress(Integer idAddress);
 
     void updateAddressStreet(String street, Optional<String> streetAddress, String city, String state);
+
+    List<Address> findByAddressStreet(String street);
 }

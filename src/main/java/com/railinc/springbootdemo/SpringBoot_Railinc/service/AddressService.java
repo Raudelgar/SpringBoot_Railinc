@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class AddressService implements iAddService {
+public class AddressService implements IAddService {
 
     private List<Address> addresses;
 
@@ -72,5 +72,12 @@ public class AddressService implements iAddService {
     @Override
     public void updateAddressStreet(String street, Optional<String> streetAddress, String city, String state) {
         addressRepository.updateAddressStreet(street, streetAddress, city, state);
+    }
+
+    @Override
+    public List<Address> findByAddressStreet(String street) {
+        addresses = new ArrayList<>();
+        addressRepository.findByStreet(street).forEach(addresses::add);
+        return addresses;
     }
 }

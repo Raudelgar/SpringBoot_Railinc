@@ -1,11 +1,13 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.service;
 
+import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
-public interface iUsService {
+public interface IUsService {
 
     /**
      * Return all user and address data combined
@@ -84,4 +86,5 @@ public interface iUsService {
      * @return
      */
     List<Object> getAUserByName(Optional<String> firstNameUser, Optional<String> lastNameUser);
+
 }

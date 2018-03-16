@@ -1,5 +1,7 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,7 @@ public class User {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_address", nullable = false)
+    @JsonManagedReference
     private Address address;
 
 //    @Transient
@@ -57,23 +60,10 @@ public class User {
     }
 
 
-//    public Integer getIdAddress(Integer addressId) {
-//        return this.addressId = addressId;
-//    }
-
-//    public Address getAddressId(Integer addressId) {
-//        address.setId(addressId);
-////        address = new Address(addressId, address.getStreet(), address.getCity(), address.getState());
-//        return address;
-//    }
-
     public Address getAddress() {
         return address;
     }
 
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
 
     @Override
     public String toString() {
