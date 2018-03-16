@@ -6709,3 +6709,282 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 >2018-03-15 21:04:33,521 INFO [TransactionContext.java:139] Rolled back transaction for test context [DefaultTestContext@306c7bf6 testClass = UARepositoryTest, testInstance = com.railinc.springbootdemo.SpringBoot_Railinc.dao.UARepositoryTest@4a070cf0, testMethod = findUserAndAddressByUserFirstNameTes@UARepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@115ca7de testClass = UARepositoryTest, locations = '{}', classes = '{class com.railinc.springbootdemo.SpringBoot_Railinc.SpringBootRailincApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@29fe4840 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@641147d0, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27c6e487, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@ba8d91c, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3e2bcc7d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@64d2d351], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
 >2018-03-15 21:04:33,525 INFO [AbstractApplicationContext.java:984] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c1909a3: startup date [Thu Mar 15 21:04:23 EDT 2018]; root of context hierarchy
 >2018-03-15 21:04:33,530 INFO [AbstractEntityManagerFactoryBean.java:548] Closing JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:05:54,146 INFO [StartupInfoLogger.java:48] Starting SpringBootRailincApplication on Raudel-Dell with PID 11080 (C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc\target\classes started by raude in C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc)
+>2018-03-15 21:05:54,153 INFO [SpringApplication.java:593] No active profile set, falling back to default profiles: default
+>2018-03-15 21:05:54,314 INFO [AbstractApplicationContext.java:583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:05:54 EDT 2018]; root of context hierarchy
+>2018-03-15 21:05:55,198 INFO [Version.java:30] HV000001: Hibernate Validator 5.3.5.Final
+>2018-03-15 21:06:00,567 INFO [TomcatEmbeddedServletContainer.java:89] Tomcat initialized with port(s): 3007 (http)
+>2018-03-15 21:06:00,603 INFO [DirectJDKLog.java:179] Starting service [Tomcat]
+>2018-03-15 21:06:00,608 INFO [DirectJDKLog.java:179] Starting Servlet Engine: Apache Tomcat/8.5.23
+>2018-03-15 21:06:01,054 INFO [DirectJDKLog.java:179] Initializing Spring embedded WebApplicationContext
+>2018-03-15 21:06:01,056 INFO [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 6759 ms
+>2018-03-15 21:06:01,464 INFO [ServletRegistrationBean.java:190] Mapping servlet: 'dispatcherServlet' to [/]
+>2018-03-15 21:06:01,474 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'characterEncodingFilter' to: [/*]
+>2018-03-15 21:06:01,476 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>2018-03-15 21:06:01,476 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+>2018-03-15 21:06:01,477 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'requestContextFilter' to: [/*]
+>2018-03-15 21:06:03,176 INFO [LocalContainerEntityManagerFactoryBean.java:349] Building JPA container EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:06:03,204 INFO [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>2018-03-15 21:06:03,319 INFO [Version.java:37] HHH000412: Hibernate Core {5.0.12.Final}
+>2018-03-15 21:06:03,321 INFO [Environment.java:213] HHH000206: hibernate.properties not found
+>2018-03-15 21:06:03,323 INFO [Environment.java:317] HHH000021: Bytecode provider name : javassist
+>2018-03-15 21:06:03,404 INFO [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+>2018-03-15 21:06:03,773 INFO [Dialect.java:156] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>2018-03-15 21:06:05,392 INFO [SchemaUpdate.java:105] HHH000228: Running hbm2ddl schema update
+>2018-03-15 21:06:05,825 INFO [AbstractEntityManagerFactoryBean.java:379] Initialized JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:06:07,566 INFO [QueryTranslatorFactoryInitiator.java:47] HHH000397: Using ASTQueryTranslatorFactory
+>2018-03-15 21:06:10,455 INFO [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:05:54 EDT 2018]; root of context hierarchy
+>2018-03-15 21:06:10,731 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.updateAddress(java.lang.Integer,com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:06:10,734 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAllAddress()
+>2018-03-15 21:06:10,735 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.addAddress(com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:06:10,736 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[GET]}" onto public com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAAddress(java.lang.Integer)
+>2018-03-15 21:06:10,737 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.deleteAddress(java.lang.Integer)
+>2018-03-15 21:06:10,738 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/street/{street}],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAddressByStreet(java.lang.String)
+>2018-03-15 21:06:10,742 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.addUser(com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:06:10,743 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAllUser()
+>2018-03-15 21:06:10,744 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser}],methods=[GET]}" onto public java.util.List<java.lang.Object> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUserByName(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>)
+>2018-03-15 21:06:10,745 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.deleteUser(java.lang.Integer)
+>2018-03-15 21:06:10,746 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUser(java.lang.Integer)
+>2018-03-15 21:06:10,747 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser} || /demo/user/street/{streetAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.updateUser(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:06:10,754 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>2018-03-15 21:06:10,755 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+>2018-03-15 21:06:10,829 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:06:10,829 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:06:10,931 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:06:11,828 INFO [MBeanExporter.java:431] Registering beans for JMX exposure on startup
+>2018-03-15 21:06:11,863 INFO [DirectJDKLog.java:179] Initializing ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:06:11,889 INFO [DirectJDKLog.java:179] Starting ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:06:11,913 INFO [DirectJDKLog.java:179] Using a shared selector for servlet write/read
+>2018-03-15 21:06:11,948 INFO [TomcatEmbeddedServletContainer.java:201] Tomcat started on port(s): 3007 (http)
+>2018-03-15 21:06:11,954 INFO [StartupInfoLogger.java:57] Started SpringBootRailincApplication in 18.399 seconds (JVM running for 19.966)
+>2018-03-15 21:06:11,955 INFO [SpringBootRailincApplication.java:18] Starting Application #========================#
+>2018-03-15 21:07:08,732 INFO [StartupInfoLogger.java:48] Starting SpringBootRailincApplication on Raudel-Dell with PID 19320 (C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc\target\classes started by raude in C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc)
+>2018-03-15 21:07:08,739 INFO [SpringApplication.java:593] No active profile set, falling back to default profiles: default
+>2018-03-15 21:07:08,885 INFO [AbstractApplicationContext.java:583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:07:08 EDT 2018]; root of context hierarchy
+>2018-03-15 21:07:09,868 INFO [Version.java:30] HV000001: Hibernate Validator 5.3.5.Final
+>2018-03-15 21:07:15,344 INFO [TomcatEmbeddedServletContainer.java:89] Tomcat initialized with port(s): 3007 (http)
+>2018-03-15 21:07:15,383 INFO [DirectJDKLog.java:179] Starting service [Tomcat]
+>2018-03-15 21:07:15,386 INFO [DirectJDKLog.java:179] Starting Servlet Engine: Apache Tomcat/8.5.23
+>2018-03-15 21:07:15,728 INFO [DirectJDKLog.java:179] Initializing Spring embedded WebApplicationContext
+>2018-03-15 21:07:15,729 INFO [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 6850 ms
+>2018-03-15 21:07:16,093 INFO [ServletRegistrationBean.java:190] Mapping servlet: 'dispatcherServlet' to [/]
+>2018-03-15 21:07:16,099 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'characterEncodingFilter' to: [/*]
+>2018-03-15 21:07:16,100 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>2018-03-15 21:07:16,101 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+>2018-03-15 21:07:16,101 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'requestContextFilter' to: [/*]
+>2018-03-15 21:07:17,177 INFO [LocalContainerEntityManagerFactoryBean.java:349] Building JPA container EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:07:17,216 INFO [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>2018-03-15 21:07:17,354 INFO [Version.java:37] HHH000412: Hibernate Core {5.0.12.Final}
+>2018-03-15 21:07:17,357 INFO [Environment.java:213] HHH000206: hibernate.properties not found
+>2018-03-15 21:07:17,360 INFO [Environment.java:317] HHH000021: Bytecode provider name : javassist
+>2018-03-15 21:07:17,472 INFO [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+>2018-03-15 21:07:17,818 INFO [Dialect.java:156] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>2018-03-15 21:07:20,167 INFO [SchemaUpdate.java:105] HHH000228: Running hbm2ddl schema update
+>2018-03-15 21:07:20,281 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: address_table
+>2018-03-15 21:07:20,285 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: address_table
+>2018-03-15 21:07:20,731 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: user_table
+>2018-03-15 21:07:20,733 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: user_table
+>2018-03-15 21:07:21,932 INFO [AbstractEntityManagerFactoryBean.java:379] Initialized JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:07:23,220 INFO [QueryTranslatorFactoryInitiator.java:47] HHH000397: Using ASTQueryTranslatorFactory
+>2018-03-15 21:07:25,245 INFO [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:07:08 EDT 2018]; root of context hierarchy
+>2018-03-15 21:07:25,502 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAllAddress()
+>2018-03-15 21:07:25,506 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[GET]}" onto public com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAAddress(java.lang.Integer)
+>2018-03-15 21:07:25,507 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.addAddress(com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:07:25,508 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.updateAddress(java.lang.Integer,com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:07:25,509 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.deleteAddress(java.lang.Integer)
+>2018-03-15 21:07:25,510 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/street/{street}],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAddressByStreet(java.lang.String)
+>2018-03-15 21:07:25,513 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.addUser(com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:07:25,514 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUser(java.lang.Integer)
+>2018-03-15 21:07:25,516 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser} || /demo/user/street/{streetAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.updateUser(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:07:25,517 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser}],methods=[GET]}" onto public java.util.List<java.lang.Object> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUserByName(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>)
+>2018-03-15 21:07:25,518 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAllUser()
+>2018-03-15 21:07:25,519 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.deleteUser(java.lang.Integer)
+>2018-03-15 21:07:25,526 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>2018-03-15 21:07:25,531 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+>2018-03-15 21:07:25,602 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:07:25,602 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:07:25,699 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:07:26,671 INFO [MBeanExporter.java:431] Registering beans for JMX exposure on startup
+>2018-03-15 21:07:26,726 INFO [DirectJDKLog.java:179] Initializing ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:07:26,763 INFO [DirectJDKLog.java:179] Starting ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:07:26,802 INFO [DirectJDKLog.java:179] Using a shared selector for servlet write/read
+>2018-03-15 21:07:26,901 INFO [TomcatEmbeddedServletContainer.java:201] Tomcat started on port(s): 3007 (http)
+>2018-03-15 21:07:26,913 INFO [StartupInfoLogger.java:57] Started SpringBootRailincApplication in 18.773 seconds (JVM running for 20.494)
+>2018-03-15 21:07:26,913 INFO [SpringBootRailincApplication.java:18] Starting Application #========================#
+>2018-03-15 21:11:02,064 INFO [DirectJDKLog.java:179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+>2018-03-15 21:11:02,065 INFO [FrameworkServlet.java:489] FrameworkServlet 'dispatcherServlet': initialization started
+>2018-03-15 21:11:02,162 INFO [FrameworkServlet.java:508] FrameworkServlet 'dispatcherServlet': initialization completed in 96 ms
+>2018-03-15 21:11:02,630 WARN [AbstractJackson2HttpMessageConverter.java:205] Failed to evaluate Jackson deserialization for type [[simple type, class com.railinc.springbootdemo.SpringBoot_Railinc.domain.User]]: java.lang.IllegalArgumentException: Can not handle managed/back reference 'defaultReference': back reference type (java.util.Set) not compatible with managed type (com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:11:02,643 WARN [AbstractJackson2HttpMessageConverter.java:205] Failed to evaluate Jackson deserialization for type [[simple type, class com.railinc.springbootdemo.SpringBoot_Railinc.domain.User]]: java.lang.IllegalArgumentException: Can not handle managed/back reference 'defaultReference': back reference type (java.util.Set) not compatible with managed type (com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:12:16,145 INFO [StartupInfoLogger.java:48] Starting SpringBootRailincApplication on Raudel-Dell with PID 16316 (C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc\target\classes started by raude in C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc)
+>2018-03-15 21:12:16,163 INFO [SpringApplication.java:593] No active profile set, falling back to default profiles: default
+>2018-03-15 21:12:16,346 INFO [AbstractApplicationContext.java:583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:12:16 EDT 2018]; root of context hierarchy
+>2018-03-15 21:12:17,609 INFO [Version.java:30] HV000001: Hibernate Validator 5.3.5.Final
+>2018-03-15 21:12:21,367 INFO [TomcatEmbeddedServletContainer.java:89] Tomcat initialized with port(s): 3007 (http)
+>2018-03-15 21:12:21,398 INFO [DirectJDKLog.java:179] Starting service [Tomcat]
+>2018-03-15 21:12:21,401 INFO [DirectJDKLog.java:179] Starting Servlet Engine: Apache Tomcat/8.5.23
+>2018-03-15 21:12:21,794 INFO [DirectJDKLog.java:179] Initializing Spring embedded WebApplicationContext
+>2018-03-15 21:12:21,798 INFO [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 5478 ms
+>2018-03-15 21:12:22,409 INFO [ServletRegistrationBean.java:190] Mapping servlet: 'dispatcherServlet' to [/]
+>2018-03-15 21:12:22,422 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'characterEncodingFilter' to: [/*]
+>2018-03-15 21:12:22,424 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>2018-03-15 21:12:22,424 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+>2018-03-15 21:12:22,424 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'requestContextFilter' to: [/*]
+>2018-03-15 21:12:23,600 INFO [LocalContainerEntityManagerFactoryBean.java:349] Building JPA container EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:12:23,633 INFO [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>2018-03-15 21:12:23,752 INFO [Version.java:37] HHH000412: Hibernate Core {5.0.12.Final}
+>2018-03-15 21:12:23,754 INFO [Environment.java:213] HHH000206: hibernate.properties not found
+>2018-03-15 21:12:23,757 INFO [Environment.java:317] HHH000021: Bytecode provider name : javassist
+>2018-03-15 21:12:23,860 INFO [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+>2018-03-15 21:12:24,226 INFO [Dialect.java:156] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>2018-03-15 21:12:25,238 INFO [SchemaUpdate.java:105] HHH000228: Running hbm2ddl schema update
+>2018-03-15 21:12:25,470 INFO [AbstractEntityManagerFactoryBean.java:379] Initialized JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:12:26,027 INFO [QueryTranslatorFactoryInitiator.java:47] HHH000397: Using ASTQueryTranslatorFactory
+>2018-03-15 21:12:27,181 INFO [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:12:16 EDT 2018]; root of context hierarchy
+>2018-03-15 21:12:27,360 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/street/{street}],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAddressByStreet(java.lang.String)
+>2018-03-15 21:12:27,362 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.updateAddress(java.lang.Integer,com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:12:27,363 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.deleteAddress(java.lang.Integer)
+>2018-03-15 21:12:27,364 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAllAddress()
+>2018-03-15 21:12:27,364 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.addAddress(com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:12:27,367 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[GET]}" onto public com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAAddress(java.lang.Integer)
+>2018-03-15 21:12:27,369 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.addUser(com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:12:27,370 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser}],methods=[GET]}" onto public java.util.List<java.lang.Object> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUserByName(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>)
+>2018-03-15 21:12:27,371 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser} || /demo/user/street/{streetAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.updateUser(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:12:27,371 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.deleteUser(java.lang.Integer)
+>2018-03-15 21:12:27,372 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUser(java.lang.Integer)
+>2018-03-15 21:12:27,372 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAllUser()
+>2018-03-15 21:12:27,377 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>2018-03-15 21:12:27,378 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+>2018-03-15 21:12:27,490 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:12:27,492 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:12:27,580 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:12:28,042 INFO [MBeanExporter.java:431] Registering beans for JMX exposure on startup
+>2018-03-15 21:12:28,090 INFO [DirectJDKLog.java:179] Initializing ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:12:28,113 INFO [DirectJDKLog.java:179] Starting ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:12:28,140 INFO [DirectJDKLog.java:179] Using a shared selector for servlet write/read
+>2018-03-15 21:12:28,179 INFO [TomcatEmbeddedServletContainer.java:201] Tomcat started on port(s): 3007 (http)
+>2018-03-15 21:12:28,205 INFO [StartupInfoLogger.java:57] Started SpringBootRailincApplication in 12.726 seconds (JVM running for 14.458)
+>2018-03-15 21:12:28,205 INFO [SpringBootRailincApplication.java:18] Starting Application #========================#
+>2018-03-15 21:12:35,374 INFO [DirectJDKLog.java:179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+>2018-03-15 21:12:35,375 INFO [FrameworkServlet.java:489] FrameworkServlet 'dispatcherServlet': initialization started
+>2018-03-15 21:12:35,460 INFO [FrameworkServlet.java:508] FrameworkServlet 'dispatcherServlet': initialization completed in 85 ms
+>2018-03-15 21:13:35,586 WARN [DefaultHandlerExceptionResolver.java:384] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: java.io.PushbackInputStream@390ce4b0; line: 5, column: 4]
+>2018-03-15 21:31:45,674 INFO [StartupInfoLogger.java:48] Starting SpringBootRailincApplication on Raudel-Dell with PID 6832 (C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc\target\classes started by raude in C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc)
+>2018-03-15 21:31:45,716 INFO [SpringApplication.java:593] No active profile set, falling back to default profiles: default
+>2018-03-15 21:31:46,080 INFO [AbstractApplicationContext.java:583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:31:46 EDT 2018]; root of context hierarchy
+>2018-03-15 21:31:49,090 INFO [Version.java:30] HV000001: Hibernate Validator 5.3.5.Final
+>2018-03-15 21:31:57,374 INFO [TomcatEmbeddedServletContainer.java:89] Tomcat initialized with port(s): 3007 (http)
+>2018-03-15 21:31:57,515 INFO [DirectJDKLog.java:179] Starting service [Tomcat]
+>2018-03-15 21:31:57,528 INFO [DirectJDKLog.java:179] Starting Servlet Engine: Apache Tomcat/8.5.23
+>2018-03-15 21:31:58,938 INFO [DirectJDKLog.java:179] Initializing Spring embedded WebApplicationContext
+>2018-03-15 21:31:58,943 INFO [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 12916 ms
+>2018-03-15 21:32:00,392 INFO [ServletRegistrationBean.java:190] Mapping servlet: 'dispatcherServlet' to [/]
+>2018-03-15 21:32:00,409 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'characterEncodingFilter' to: [/*]
+>2018-03-15 21:32:00,411 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>2018-03-15 21:32:00,412 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+>2018-03-15 21:32:00,413 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'requestContextFilter' to: [/*]
+>2018-03-15 21:32:03,222 INFO [LocalContainerEntityManagerFactoryBean.java:349] Building JPA container EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:32:03,281 INFO [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>2018-03-15 21:32:03,561 INFO [Version.java:37] HHH000412: Hibernate Core {5.0.12.Final}
+>2018-03-15 21:32:03,567 INFO [Environment.java:213] HHH000206: hibernate.properties not found
+>2018-03-15 21:32:03,573 INFO [Environment.java:317] HHH000021: Bytecode provider name : javassist
+>2018-03-15 21:32:03,788 INFO [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+>2018-03-15 21:32:04,577 INFO [Dialect.java:156] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>2018-03-15 21:32:07,447 INFO [SchemaUpdate.java:105] HHH000228: Running hbm2ddl schema update
+>2018-03-15 21:32:07,499 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: address_table
+>2018-03-15 21:32:07,502 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: address_table
+>2018-03-15 21:32:07,788 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: user_table
+>2018-03-15 21:32:07,792 INFO [InformationExtractorJdbcDatabaseMetaDataImpl.java:365] HHH000262: Table not found: user_table
+>2018-03-15 21:32:09,335 INFO [AbstractEntityManagerFactoryBean.java:379] Initialized JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:32:10,411 INFO [QueryTranslatorFactoryInitiator.java:47] HHH000397: Using ASTQueryTranslatorFactory
+>2018-03-15 21:32:14,591 INFO [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:31:46 EDT 2018]; root of context hierarchy
+>2018-03-15 21:32:15,073 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/street/{street}],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAddressByStreet(java.lang.String)
+>2018-03-15 21:32:15,077 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[GET]}" onto public com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAAddress(java.lang.Integer)
+>2018-03-15 21:32:15,079 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAllAddress()
+>2018-03-15 21:32:15,081 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.deleteAddress(java.lang.Integer)
+>2018-03-15 21:32:15,083 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.updateAddress(java.lang.Integer,com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:32:15,085 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.addAddress(com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:32:15,093 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.addUser(com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:32:15,094 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.deleteUser(java.lang.Integer)
+>2018-03-15 21:32:15,096 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAllUser()
+>2018-03-15 21:32:15,099 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser} || /demo/user/street/{streetAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.updateUser(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:32:15,106 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUser(java.lang.Integer)
+>2018-03-15 21:32:15,108 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser}],methods=[GET]}" onto public java.util.List<java.lang.Object> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUserByName(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>)
+>2018-03-15 21:32:15,128 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>2018-03-15 21:32:15,130 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+>2018-03-15 21:32:15,509 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:32:15,510 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:32:15,845 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:32:17,424 INFO [MBeanExporter.java:431] Registering beans for JMX exposure on startup
+>2018-03-15 21:32:17,500 INFO [DirectJDKLog.java:179] Initializing ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:32:17,569 INFO [DirectJDKLog.java:179] Starting ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:32:17,622 INFO [DirectJDKLog.java:179] Using a shared selector for servlet write/read
+>2018-03-15 21:32:17,741 INFO [TomcatEmbeddedServletContainer.java:201] Tomcat started on port(s): 3007 (http)
+>2018-03-15 21:32:17,759 INFO [StartupInfoLogger.java:57] Started SpringBootRailincApplication in 33.588 seconds (JVM running for 37.79)
+>2018-03-15 21:32:17,760 INFO [SpringBootRailincApplication.java:18] Starting Application #========================#
+>2018-03-15 21:34:37,846 INFO [DirectJDKLog.java:179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+>2018-03-15 21:34:37,848 INFO [FrameworkServlet.java:489] FrameworkServlet 'dispatcherServlet': initialization started
+>2018-03-15 21:34:38,035 INFO [FrameworkServlet.java:508] FrameworkServlet 'dispatcherServlet': initialization completed in 186 ms
+>2018-03-15 21:46:48,300 INFO [StartupInfoLogger.java:48] Starting SpringBootRailincApplication on Raudel-Dell with PID 15032 (C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc\target\classes started by raude in C:\Users\raude\Documents\intellij-sandbox\SpringProjects\SpringBoot_Railinc)
+>2018-03-15 21:46:48,317 INFO [SpringApplication.java:593] No active profile set, falling back to default profiles: default
+>2018-03-15 21:46:48,773 INFO [AbstractApplicationContext.java:583] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:46:48 EDT 2018]; root of context hierarchy
+>2018-03-15 21:46:51,973 INFO [Version.java:30] HV000001: Hibernate Validator 5.3.5.Final
+>2018-03-15 21:47:01,763 INFO [TomcatEmbeddedServletContainer.java:89] Tomcat initialized with port(s): 3007 (http)
+>2018-03-15 21:47:01,858 INFO [DirectJDKLog.java:179] Starting service [Tomcat]
+>2018-03-15 21:47:01,863 INFO [DirectJDKLog.java:179] Starting Servlet Engine: Apache Tomcat/8.5.23
+>2018-03-15 21:47:02,885 INFO [DirectJDKLog.java:179] Initializing Spring embedded WebApplicationContext
+>2018-03-15 21:47:02,887 INFO [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 14127 ms
+>2018-03-15 21:47:04,185 INFO [ServletRegistrationBean.java:190] Mapping servlet: 'dispatcherServlet' to [/]
+>2018-03-15 21:47:04,204 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'characterEncodingFilter' to: [/*]
+>2018-03-15 21:47:04,207 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+>2018-03-15 21:47:04,209 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+>2018-03-15 21:47:04,210 INFO [AbstractFilterRegistrationBean.java:258] Mapping filter: 'requestContextFilter' to: [/*]
+>2018-03-15 21:47:07,305 INFO [LocalContainerEntityManagerFactoryBean.java:349] Building JPA container EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:47:07,384 INFO [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+>2018-03-15 21:47:07,792 INFO [Version.java:37] HHH000412: Hibernate Core {5.0.12.Final}
+>2018-03-15 21:47:07,799 INFO [Environment.java:213] HHH000206: hibernate.properties not found
+>2018-03-15 21:47:07,806 INFO [Environment.java:317] HHH000021: Bytecode provider name : javassist
+>2018-03-15 21:47:08,015 INFO [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+>2018-03-15 21:47:09,352 INFO [Dialect.java:156] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+>2018-03-15 21:47:12,016 INFO [SchemaUpdate.java:105] HHH000228: Running hbm2ddl schema update
+>2018-03-15 21:47:12,420 INFO [AbstractEntityManagerFactoryBean.java:379] Initialized JPA EntityManagerFactory for persistence unit 'default'
+>2018-03-15 21:47:13,553 INFO [QueryTranslatorFactoryInitiator.java:47] HHH000397: Using ASTQueryTranslatorFactory
+>2018-03-15 21:47:16,963 INFO [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a2f921: startup date [Thu Mar 15 21:46:48 EDT 2018]; root of context hierarchy
+>2018-03-15 21:47:17,836 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/street/{street}],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAddressByStreet(java.lang.String)
+>2018-03-15 21:47:17,850 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.addAddress(com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:47:17,851 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[GET]}" onto public com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAAddress(java.lang.Integer)
+>2018-03-15 21:47:17,853 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.deleteAddress(java.lang.Integer)
+>2018-03-15 21:47:17,859 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address/{idAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.updateAddress(java.lang.Integer,com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address)
+>2018-03-15 21:47:17,866 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/address],methods=[GET]}" onto public java.util.List<com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address> com.railinc.springbootdemo.SpringBoot_Railinc.controller.AddressController.getAllAddress()
+>2018-03-15 21:47:17,877 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[POST]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.addUser(com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:47:17,882 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[DELETE]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.deleteUser(java.lang.Integer)
+>2018-03-15 21:47:17,885 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser}],methods=[GET]}" onto public java.util.List<java.lang.Object> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUserByName(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>)
+>2018-03-15 21:47:17,889 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAllUser()
+>2018-03-15 21:47:17,902 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/firstName/{firstNameUser} || /demo/user/lastName/{lastNameUser} || /demo/user/street/{streetAddress}],methods=[PUT]}" onto public void com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.updateUser(java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,java.util.Optional<java.lang.String>,com.railinc.springbootdemo.SpringBoot_Railinc.domain.User)
+>2018-03-15 21:47:17,909 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/demo/user/{idUser}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<java.lang.Object>> com.railinc.springbootdemo.SpringBoot_Railinc.controller.UserController.getAUser(java.lang.Integer)
+>2018-03-15 21:47:17,927 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+>2018-03-15 21:47:17,933 INFO [AbstractHandlerMethodMapping.java:543] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+>2018-03-15 21:47:18,330 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:47:18,331 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:47:18,684 INFO [AbstractUrlHandlerMapping.java:362] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+>2018-03-15 21:47:20,419 INFO [MBeanExporter.java:431] Registering beans for JMX exposure on startup
+>2018-03-15 21:47:20,529 INFO [DirectJDKLog.java:179] Initializing ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:47:20,604 INFO [DirectJDKLog.java:179] Starting ProtocolHandler ["http-nio-3007"]
+>2018-03-15 21:47:20,674 INFO [DirectJDKLog.java:179] Using a shared selector for servlet write/read
+>2018-03-15 21:47:20,768 INFO [TomcatEmbeddedServletContainer.java:201] Tomcat started on port(s): 3007 (http)
+>2018-03-15 21:47:20,793 INFO [StartupInfoLogger.java:57] Started SpringBootRailincApplication in 34.306 seconds (JVM running for 39.027)
+>2018-03-15 21:47:20,796 INFO [SpringBootRailincApplication.java:18] Starting Application #========================#
+>2018-03-15 21:47:32,004 INFO [DirectJDKLog.java:179] Initializing Spring FrameworkServlet 'dispatcherServlet'
+>2018-03-15 21:47:32,005 INFO [FrameworkServlet.java:489] FrameworkServlet 'dispatcherServlet': initialization started
+>2018-03-15 21:47:32,153 INFO [FrameworkServlet.java:508] FrameworkServlet 'dispatcherServlet': initialization completed in 147 ms

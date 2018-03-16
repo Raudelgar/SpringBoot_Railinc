@@ -18,11 +18,9 @@ public class User {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_address", nullable = false)
-    @JsonManagedReference
+//    @JsonManagedReference
     private Address address;
 
-//    @Transient
-//    private Integer addressId;
 
     public User() {
 

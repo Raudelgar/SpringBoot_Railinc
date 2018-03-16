@@ -1,10 +1,8 @@
 package com.railinc.springbootdemo.SpringBoot_Railinc.service;
 
-import com.railinc.springbootdemo.SpringBoot_Railinc.domain.Address;
 import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 public interface IUsService {
