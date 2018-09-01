@@ -85,4 +85,6 @@ public interface IUsService {
      */
     List<Object> getAUserByName(Optional<String> firstNameUser, Optional<String> lastNameUser);
 
+    void deleteAllInBatch();
+
 }

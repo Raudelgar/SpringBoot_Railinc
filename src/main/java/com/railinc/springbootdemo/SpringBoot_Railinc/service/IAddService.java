@@ -28,4 +28,8 @@ public interface IAddService {
     void updateAddressStreet(String street, Optional<String> streetAddress, String city, String state);
 
     List<Address> findByAddressStreet(String street);
+
+    void deleteAllInBatch();
+
+    Integer getAAddressIdByStreetAndCityAndState(Address address);
 }

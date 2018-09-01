@@ -3,10 +3,12 @@ package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "user_table")
 public class User {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,10 +28,10 @@ public class User {
 
     }
 
-    public User(String firstName, String lastName, Integer idAddress) {
+    public User(String firstName, String lastName, Integer address) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = new Address(idAddress,"", "","");
+        this.address = new Address(address);
     }
 
 

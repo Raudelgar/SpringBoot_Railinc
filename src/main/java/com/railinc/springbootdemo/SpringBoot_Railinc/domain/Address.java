@@ -3,12 +3,14 @@ package com.railinc.springbootdemo.SpringBoot_Railinc.domain;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Optional;
 import java.util.Set;
 
 @Entity
 @Table(name = "address_table")
 public class Address {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,6 +31,10 @@ public class Address {
         this.street = street;
         this.city = city;
         this.state = state;
+    }
+
+    public Address(Integer id) {
+        this.id = id;
     }
 
 
@@ -70,5 +76,15 @@ public class Address {
 
     public void setUsers(Set<User> users) {
         this.users = users;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", users=" + users +
+                '}';
     }
 }

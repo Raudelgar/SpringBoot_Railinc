@@ -18,17 +18,20 @@ public class UserController {
 
 
     @RequestMapping(value = "/demo/user", method = RequestMethod.GET)
-    public ResponseEntity<List<Object>> getAllUser() {
-        return new ResponseEntity<List<Object>>(userService.getAllUser(), HttpStatus.OK);
+    @ResponseBody
+    public List<Object> getAllUser() {
+        return  userService.getAllUser();
     }
 
 
     @RequestMapping(value = "/demo/user/{idUser}", method = RequestMethod.GET)
-    public ResponseEntity<List<Object>> getAUser(@PathVariable Integer idUser) {
-        return new ResponseEntity<List<Object>>(userService.getAUser(idUser), HttpStatus.OK);
+    @ResponseBody
+    public List<Object> getAUser(@PathVariable Integer idUser) {
+        return userService.getAUser(idUser);
     }
 
     @RequestMapping(value = {"/demo/user/firstName/{firstNameUser}", "/demo/user/lastName/{lastNameUser}"}, method = RequestMethod.GET)
+    @ResponseBody
     public List<Object> getAUserByName(@PathVariable Optional<String> firstNameUser, @PathVariable Optional<String> lastNameUser) {
         return userService.getAUserByName(firstNameUser, lastNameUser);
     }

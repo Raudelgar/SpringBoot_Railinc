@@ -31,6 +31,7 @@ public class AddressService implements IAddService {
         return addressRepository.findOne(idAddress);
     }
 
+    @Override
     public Integer getAAddressIdByStreetAndCityAndState(Address address) {
         return addressRepository.findByAddressStreetAndCityAndState(address.getStreet(), address.getCity(), address.getState());
     }
@@ -79,5 +80,10 @@ public class AddressService implements IAddService {
         addresses = new ArrayList<>();
         addressRepository.findByStreet(street).forEach(addresses::add);
         return addresses;
+    }
+
+    @Override
+    public void deleteAllInBatch() {
+        addressRepository.deleteAllInBatch();
     }
 }

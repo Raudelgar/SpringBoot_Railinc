@@ -7,6 +7,7 @@ import com.railinc.springbootdemo.SpringBoot_Railinc.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -15,13 +16,13 @@ import java.util.*;
 
 @Service
 @Transactional
+@Async
 public class UserService implements IUsService {
 
     private static Logger log = LoggerFactory.getLogger(SpringBootRailincApplication.class);
 
     private List<Object> userObj;
     private User user = null;
-    boolean addressExist = false;
     boolean userExist = false;
     private Integer addressId;
 
@@ -50,6 +51,9 @@ public class UserService implements IUsService {
     @Override
     public void addUser(User userIn) {
         //check if address exist to avoid duplicate data, return id
+        if(null == userIn) {
+            return;
+        }
         addressId = checkAddressId(userIn.getAddress());
         //if user exist with same address
         checkUserId(userIn);
@@ -65,9 +69,7 @@ public class UserService implements IUsService {
 
     private Integer checkAddressId(Address address) {
         Integer id = addressService.getAAddressIdByStreetAndCityAndState(address);
-        if(null != id) {
-            addressExist = true;
-        }else {
+        if(null == id) {
             addressService.addAddress(address);
             id = addressService.getAAddressIdByStreetAndCityAndState(address);
         }
@@ -131,6 +133,11 @@ public class UserService implements IUsService {
             return null;
         }
 
+    }
+
+    @Override
+    public void deleteAllInBatch() {
+        userRepository.deleteAllInBatch();
     }
 
 }
